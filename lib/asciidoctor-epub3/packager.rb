@@ -580,11 +580,6 @@ class Packager
         rights(doc.attr 'copyright')
       end
 
-      # FIXME wait until gepub releases the version that supports this
-      if doc.attr? 'isbn'
-        isbn(doc.attr 'isbn')
-      end
-
       #add_metadata 'ibooks:specified-fonts', true
 
       add_theme_assets doc
