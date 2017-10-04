@@ -148,15 +148,7 @@ class ContentConverter
 <title>#{doctitle_sanitized}</title>
 <link rel="stylesheet" type="text/css" href="styles/epub3.css"/>
 <link rel="stylesheet" type="text/css" href="styles/epub3-css3-only.css" media="(min-device-width: 0px)"/>
-#{icon_css_head}<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function(event, reader) {
-  if (!(reader = navigator.epubReadingSystem)) {
-    if (navigator.userAgent.indexOf(' calibre/') >= 0) reader = { name: 'calibre-desktop' };
-    else if (window.parent == window || !(reader = window.parent.navigator.epubReadingSystem)) return;
-  }
-  document.body.setAttribute('class', reader.name.toLowerCase().replace(/ /g, '-'));
-});
-</script>
+#{icon_css_head}
 </head>
 <body>
 <section class="chapter" title="#{doctitle_sanitized.gsub '"', '&quot;'}" epub:type="chapter" id="#{docid}">
